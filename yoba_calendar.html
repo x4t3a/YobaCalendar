@@ -1,0 +1,50 @@
+
+<!doctype html>
+<html>
+
+    <head>
+        <!-- w/o any purpose or meaning -->
+        <title>Yoba Calendar</title>
+        <!-- I really do not dig css, so it works the way it copied from google -->
+        <style>
+            body, html {
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                background: url("https://pp.vk.me/c629231/v629231589/6d6a/bkkt20sIe4M.jpg") no-repeat center center;
+            }
+            p {
+                background: #fff;
+                width: 16em; height: 9em;
+                line-height: 9em;
+                margin: auto;
+                padding: auto;
+                position: absolute;
+                text-align: center;
+                top: 0; left: 0; bottom: 0; right: 0;
+                vertical-align: middle;
+                opacity: 0.9;
+                border-radius: 1em;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div>
+            <p id='date'></p>
+        </div>
+        <script>
+            var today = new Date();
+            var start = new Date(2015, 11, 1);
+            var one_day = 24 * 60 * 60 * 1000; // ms
+            var diff = Math.floor(Math.abs(today - start) / (one_day));
+            document.getElementById('date').innerHTML = 'Today is December ' + String(diff) + ', 2015.';
+        </script>
+    </body>
+
+</html>
+
